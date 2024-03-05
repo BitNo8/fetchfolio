@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <label for="dropdown-url">Dropdown URL:</label>
+    <input type="text" id="dropdown-url">
+    <br>
+    <label for="article-url">Article URL:</label>
+    <input type="text" id="article-url">
+    <br>
+    <label for="image-selector">Image Selector:</label>
+    <input type="text" id="image-selector">
+    <br>
+    <button onclick="generateAttributes()">Generate Attributes</button>
+    <br>
+
     <button onclick="showAllArticles()" aria-label="Show All News" role="button">Show All News</button>
     <button onclick="toggleDropdown('journalists')" aria-label="Toggle Journalists" role="button">
         <span id="journalists-label">Journalists</span>
