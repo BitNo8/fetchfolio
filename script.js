@@ -115,7 +115,8 @@ function showAllArticles() {
 function generateAttributes() {
     const dropdownUrl = document.getElementById('dropdown-url').value;
     const articleUrl = document.getElementById('article-url').value;
-    const imageSelector = document.getElementById('image-selector').value;
+    const imageSelector = document.getElementById('image-selector-input').value;
+
 
     const scriptElement = document.createElement('script');
     scriptElement.setAttribute('src', `script.js?dropdownUrl=${encodeURIComponent(dropdownUrl)}&articleUrl=${encodeURIComponent(articleUrl)}&imageSelector=${encodeURIComponent(imageSelector)}`);
