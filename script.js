@@ -132,7 +132,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dropdownUrl = ''; // Placeholder for dropdown URL
     const articleUrl = ''; // Placeholder for article URL
-    const imageSelector = ''; // Placeholder for image selector
+    const imageSelector = '.thumbnail img'; // Example selector targeting <img> elements inside elements with class 'thumbnail'
+
+// Function to extract images based on the provided selector
+function extractImages(doc) {
+    const images = [];
+    const imageContainers = doc.querySelectorAll(imageSelector);
+    imageContainers.forEach(container => {
+        const imageUrl = container.getAttribute('src');
+        const altText = container.getAttribute('alt');
+        images.push({ url: imageUrl, alt: altText });
+    });
+    return images;
+}
 
     fetchHTMLContent(dropdownUrl)
         .then(dropdownDoc => {
