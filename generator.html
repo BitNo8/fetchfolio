@@ -1,0 +1,19 @@
+<!-- HTML for GUI Generator -->
+<form id="generator-form">
+  <label for="url">URL:</label>
+  <input type="text" id="url" name="url" value="https://southeasths.lausd.org/apps/albums/school/0/345749/0?uREC_ID=0&backTitle=&backLink="><br>
+  <label for="selector">Selector:</label>
+  <input type="text" id="selector" name="selector" value=".articles"><br>
+  <button type="button" onclick="generateAttributes()">Generate Attributes</button>
+</form>
+<p id="attributes"></p>
+
+<script>
+  // JavaScript for GUI Generator
+  function generateAttributes() {
+    const url = document.getElementById('url').value;
+    const selector = document.getElementById('selector').value;
+    const attributes = `data-url="${url}" data-selector="${selector}"`;
+    document.getElementById('attributes').innerText = attributes;
+  }
+</script>
